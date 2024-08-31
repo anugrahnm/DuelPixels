@@ -7,7 +7,7 @@ var moveset = moveset_data.new().data
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-func ChangeText(string_string):
+func ChangeText(string_string) -> void:
 	player_label.text = string_string
 	
 func InputKeyReader() -> void:
@@ -21,7 +21,8 @@ func InputKeyReader() -> void:
 		ChangeText(moveset)
 		
 func _process(delta: float) -> void:
-	InputKeyReader()
+	if delta != 0:
+		InputKeyReader()
 
 func _physics_process(delta: float) -> void:
 	
@@ -38,9 +39,6 @@ func _physics_process(delta: float) -> void:
 	var direction := Input.get_axis("left", "right")
 	if direction:
 		velocity.x = direction * SPEED
-		match direction:
-			1:ChangeText("right")
-			-1:ChangeText("left")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
