@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var moveset = moveset_data.new().DATA
+var moveset = moveset_data.new().ExtractData()
 
 @onready var player_label: Label = %player_label
 
@@ -8,21 +8,28 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 #needs to be tranfered to a state machine/manager script
-var previous_move: String = ""
+var previous_move: String
 var current_array: Array
-var string_passed = ""
+var string_passed: String
+
+
+func _ready() -> void:
+	current_array.resize(6)
+	current_array.fill("0")
 
 func UpdateCurrentMove(current_move) -> void:
 	
-	for i in 20:
-		current_array.append(str(i))
 	
-	current_array = current_move.split(".")
 	
 	if not "N0" in current_array:
-		#current_array[0] = "N0"
-		#current_array[1] = current_move
-		pass
+		current_array[0] = "N0"
+		current_array[1] = current_move
+	elif not "N1" in current_array:
+		current_array[2] = "N1"
+		current_array[3] = current_move
+	else:
+		current_array[4] = "N2"
+		current_array[5] = current_move
 	print(current_array)
 		
 	string_passed = ".".join(current_array)
