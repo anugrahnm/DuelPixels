@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d0k785s6fq62v"]
+[gd_scene load_steps=6 format=3 uid="uid://b6behagu2ypqw"]
 
 [ext_resource type="Texture2D" uid="uid://c8qrn0uxjy4bu" path="res://icon.svg" id="1_gk5xk"]
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_jm4j0"]
@@ -19,13 +19,14 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kx2k4"]
-size = Vector2(127.75, 128.5)
+size = Vector2(69.875, 60.25)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_jm4j0")
 
 [node name="player_sprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
+position = Vector2(-14.5, -17)
+scale = Vector2(0.273438, 0.234375)
 sprite_frames = SubResource("SpriteFrames_7yqyo")
 
 [node name="player_label" type="Label" parent="."]
@@ -37,11 +38,12 @@ anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -32.0
 offset_top = -55.0
-offset_right = 32.0
+offset_right = 9.0
 offset_bottom = -32.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 8
 text = "Start_text
 "
 horizontal_alignment = 1
@@ -49,5 +51,6 @@ vertical_alignment = 2
 autowrap_mode = 2
 
 [node name="player_collison_box" type="CollisionShape2D" parent="."]
+position = Vector2(-14.4688, -17.0625)
 scale = Vector2(0.5, 0.5)
 shape = SubResource("RectangleShape2D_kx2k4")
