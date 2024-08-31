@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+var moveset = moveset_data.new().data
+
 @onready var player_label: Label = %player_label
 
 const SPEED = 300.0
@@ -15,6 +17,8 @@ func InputKeyReader() -> void:
 		ChangeText("right")
 	if Input.is_action_just_pressed("left"):
 		ChangeText("left")
+	if Input.is_action_just_pressed("debugging_key"):
+		ChangeText(moveset)
 		
 func _process(delta: float) -> void:
 	InputKeyReader()
