@@ -28,7 +28,8 @@ script = ExtResource("1_jm4j0")
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_7yqyo")
 
-[node name="Label" type="Label" parent="."]
+[node name="player_label" type="Label" parent="."]
+unique_name_in_owner = true
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
