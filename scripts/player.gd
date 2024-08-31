@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var player_label: Label = %player_label
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -300.0
 
 func ChangeText(string_string):
 	player_label.text = string_string
