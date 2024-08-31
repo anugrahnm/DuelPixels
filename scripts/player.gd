@@ -1,24 +1,47 @@
 extends CharacterBody2D
 
-var moveset = moveset_data.new().data
+var moveset = moveset_data.new().DATA
 
 @onready var player_label: Label = %player_label
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
-func ChangeText(string_string) -> void:
-	player_label.text = string_string
+#needs to be tranfered to a state machine/manager script
+var previous_move: String = ""
+var current_array: Array
+var string_passed = ""
+
+func UpdateCurrentMove(current_move) -> void:
+	
+	for i in 20:
+		current_array.append(str(i))
+	
+	current_array = current_move.split(".")
+	
+	if not "N0" in current_array:
+		#current_array[0] = "N0"
+		#current_array[1] = current_move
+		pass
+	print(current_array)
+		
+	string_passed = ".".join(current_array)
+	ChangeText(string_passed)
+	
+func ChangeText(string_passed) -> void:
+	player_label.text = string_passed
+#
+
 	
 func InputKeyReader() -> void:
 	if Input.is_action_just_pressed("jump"):
-		ChangeText("jump")
+		UpdateCurrentMove("jump")
 	if Input.is_action_just_pressed("right"):
-		ChangeText("right")
+		UpdateCurrentMove("right")
 	if Input.is_action_just_pressed("left"):
-		ChangeText("left")
+		UpdateCurrentMove("left")
 	if Input.is_action_just_pressed("debugging_key"):
-		ChangeText(moveset)
+		UpdateCurrentMove(moveset)
 		
 func _process(delta: float) -> void:
 	if delta != 0:
