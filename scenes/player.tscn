@@ -19,13 +19,13 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kx2k4"]
-size = Vector2(69.875, 60.25)
+size = Vector2(64, 64)
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_jm4j0")
 
 [node name="player_sprite" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.273438, 0.234375)
+scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_7yqyo")
 
 [node name="player_label" type="Label" parent="."]
