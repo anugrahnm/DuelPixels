@@ -1,224 +1,224 @@
 [
-	{
-		"Na0": "punch (left jab)",
-		"Na1": "punch (quick left jab)",
-		"Na2": "Na0.punch",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "kick (high left kick)",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "heavy (quick version of wind-up punch)",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "Na0.jump",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "Na0.kick",
-		"Na2": "",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "heavy (1-2 combo)",
-		"Na2": "Na0.punch",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "Na0.kick",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "heavy (right back-hand slap)",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "Na0.jump [+ follow_up_power_up]",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "Na0.jump",
-		"Na2": "",
-		"Na3": ""
-	},
-	{
-		"Na0": "kick (low right kick)",
-		"Na1": "Na0.punch",
-		"Na2": "",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "kick (quick mid right kick)",
-		"Na2": "Na0.punch",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "kick (low left kick)",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "{heavy invalidated}",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "jump (resets character orientation mid air)",
-		"Na3": "all = Na0.kick.Na1.jump.Na2.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "heavy (after stepping back to NA0 position, mid left kick that also leaps the character forward by a bit)",
-		"Na2": "Na0.all",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "jump (resets character orientation mid air)",
-		"Na2": "{punch invalidated}",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "kick (mid-air left mid swing kick)",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "{heavy invalidated}",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "{jump invalidated}",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "heavy (wind-up punch)",
-		"Na1": "{inputs invalidated}",
-		"Na2": "NaO.all",
-		"Na3": ""
-	},
-	{
-		"Na0": "jump (jump straight up)",
-		"Na1": "{punch invalidated}",
-		"Na2": "Na0.all",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "kick (air kick)",
-		"Na2": "Na0.punch",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "kick (kick-push enemy back and jump back and create distance)",
-		"Na3": "Na0.all [+ power_up]"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "Na0.heavy",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "Na0.jump",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "heavy (superman punch)",
-		"Na2": "Na0.all",
-		"Na3": ""
-	},
-	{
-		"Na0": "",
-		"Na1": "jump (double jump if elevated surface nearby) or else Na0.jump",
-		"Na2": "{punch invalidated}",
-		"Na3": "Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "kick (knees to the face)",
-		"Na3": "{punch invalidated} > Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "",
-		"Na3": "kick = Na0.jump.Na1.kick.Na2.kick"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "",
-		"Na3": "heavy = Na0.kick.Na1.jump.Na2.kick"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "",
-		"Na3": "{jump invalidated} > Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "heavy (elbows on top of the head)",
-		"Na3": "{punch ivalidated} > Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "",
-		"Na3": "kick = Na0.jump.Na1.jump.Na2.kick"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "",
-		"Na3": "heavy = Na0.jump.Na1.jump.Na2.kick"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "",
-		"Na3": "{jump invalidated} > Na0.all"
-	},
-	{
-		"Na0": "",
-		"Na1": "",
-		"Na2": "jump (steps on the enemy to jump behind them)",
-		"Na3": "Na0.all"
-	}
+  {
+    "N0": "punch (left jab)",
+    "N1": "punch (quick left jab)",
+    "N2": "N0.punch",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "kick (high left kick)",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "heavy (quick version of wind-up punch)",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "N0.jump",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "N0.kick",
+    "N2": "",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "heavy (1-2 combo)",
+    "N2": "N0.punch",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "N0.kick",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "heavy (right back-hand slap)",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "N0.jump [+ follow_up_power_up]",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "N0.jump",
+    "N2": "",
+    "N3": ""
+  },
+  {
+    "N0": "kick (low right kick)",
+    "N1": "N0.punch",
+    "N2": "",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "kick (quick mid right kick)",
+    "N2": "N0.punch",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "kick (low left kick)",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "{heavy invalidated}",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "jump (resets character orientation mid air)",
+    "N3": "all = N0.kick.N1.jump.N2.all"
+  },
+  {
+    "N0": "",
+    "N1": "heavy (after stepping back to N0 position, mid left kick that also leaps the character forward by a bit)",
+    "N2": "N0.all",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "jump (resets character orientation mid air)",
+    "N2": "{punch invalidated}",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "kick (mid-air left mid swing kick)",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "{heavy invalidated}",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "{jump invalidated}",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "heavy (wind-up punch)",
+    "N1": "{inputs invalidated}",
+    "N2": "NO.all",
+    "N3": ""
+  },
+  {
+    "N0": "jump (jump straight up)",
+    "N1": "{punch invalidated}",
+    "N2": "N0.all",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "kick (air kick)",
+    "N2": "N0.punch",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "kick (kick-push enemy back and jump back and create distance)",
+    "N3": "N0.all [+ power_up]"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "N0.heavy",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "N0.jump",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "heavy (superman punch)",
+    "N2": "N0.all",
+    "N3": ""
+  },
+  {
+    "N0": "",
+    "N1": "jump (double jump if elevated surface nearby) or else N0.jump",
+    "N2": "{punch invalidated}",
+    "N3": "N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "kick (knees to the face)",
+    "N3": "{punch invalidated} > N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "",
+    "N3": "kick = N0.jump.N1.kick.N2.kick"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "",
+    "N3": "heavy = N0.kick.N1.jump.N2.kick"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "",
+    "N3": "{jump invalidated} > N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "heavy (elbows on top of the head)",
+    "N3": "{punch ivalidated} > N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "",
+    "N3": "kick = N0.jump.N1.jump.N2.kick"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "",
+    "N3": "heavy = N0.jump.N1.jump.N2.kick"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "",
+    "N3": "{jump invalidated} > N0.all"
+  },
+  {
+    "N0": "",
+    "N1": "",
+    "N2": "jump (steps on the enemy to jump behind them)",
+    "N3": "N0.all"
+  }
 ]
