@@ -1,0 +1,65 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6behagu2ypqw"]
+
+[ext_resource type="Texture2D" uid="uid://c8qrn0uxjy4bu" path="res://icon.svg" id="1_gk5xk"]
+[ext_resource type="Script" path="res://scripts_w/player.gd" id="1_jm4j0"]
+[ext_resource type="PackedScene" uid="uid://5d4hqagd40lu" path="res://scenes_w/state_scenes/State_Manager.tscn" id="3_nij40"]
+[ext_resource type="PackedScene" uid="uid://dihpl2fnhambw" path="res://scenes_w/state_scenes/State_1.tscn" id="4_dnfgo"]
+[ext_resource type="PackedScene" uid="uid://b2wjnkpeffwb0" path="res://scenes_w/state_scenes/State_2.tscn" id="5_1uicg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fv0tf"]
+atlas = ExtResource("1_gk5xk")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7yqyo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fv0tf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kx2k4"]
+size = Vector2(64, 64)
+
+[node name="player" type="CharacterBody2D"]
+z_index = 5
+script = ExtResource("1_jm4j0")
+
+[node name="player_sprite" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.25, 0.25)
+sprite_frames = SubResource("SpriteFrames_7yqyo")
+
+[node name="player_label" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -39.0
+offset_right = 17.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Start_text
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+autowrap_mode = 2
+
+[node name="player_collison_box" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_kx2k4")
+
+[node name="State_Manager" parent="." node_paths=PackedStringArray("initial_state") instance=ExtResource("3_nij40")]
+initial_state = NodePath("State_1")
+
+[node name="State_1" parent="State_Manager" instance=ExtResource("4_dnfgo")]
+
+[node name="State_2" parent="State_Manager" instance=ExtResource("5_1uicg")]

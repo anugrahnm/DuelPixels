@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="DuelPixels"
-run/main_scene="res://scenes_fluffy/level_1.tscn"
+run/main_scene="res://scenes_f/level_1.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -20,10 +20,6 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1280
 window/size/viewport_height=720
 window/stretch/mode="viewport"
-
-[editor_plugins]
-
-enabled=PackedStringArray("res://addons/godot_vim/plugin.cfg")
 
 [input]
 
