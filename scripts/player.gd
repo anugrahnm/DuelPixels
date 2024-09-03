@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 var arr1 = moveset_data.new().ExtractData()
 var parse = arr1[0]
 var moveset = arr1[1]
@@ -16,12 +17,14 @@ var string_passed: String
 
 
 func _ready() -> void:
+	
+	
 	current_array.resize(6)
 	current_array.fill("0")
 
 func UpdateCurrentMove(current_move) -> void:
 	
-	print(parse)
+	#print(parse)
 	#print(parse["N0"]["kick (low right kick)"][1]["N1"]["kick (quick mid right kick)"][1]["N2"]["jump (resets character orientation mid air)"])
 	#data["N0"][last_N0_value][1]["N1"][last_N1_value][1]["N2"][last_N2_value].append(temp3)
 	
