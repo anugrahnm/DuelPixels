@@ -296,11 +296,7 @@ sources/0 = SubResource("TileSetAtlasSource_ecrsb")
 
 [node name="level_1" type="Node2D"]
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="pause_menu" parent="CanvasLayer" instance=ExtResource("1_fxd8q")]
-size_flags_horizontal = 4
-size_flags_vertical = 4
+[node name="pause_menu" parent="." instance=ExtResource("1_fxd8q")]
 
 [node name="player" parent="." instance=ExtResource("2_hely7")]
 position = Vector2(313, 303)
