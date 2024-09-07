@@ -3,7 +3,6 @@ class_name Base_State
 
 signal Transitioned
 
-
 func Enter():
 	pass
 

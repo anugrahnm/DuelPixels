@@ -41,12 +41,10 @@ func UpdateCurrentMove(current_move) -> void:
 		
 	string_passed = ".".join(current_array)
 	ChangeText(string_passed)
-	
+
 func ChangeText(string_passed) -> void:
 	player_label.text = string_passed
-#
 
-	
 func InputKeyReader() -> void:
 	if Input.is_action_just_pressed("jump"):
 		UpdateCurrentMove("jump")
@@ -56,7 +54,7 @@ func InputKeyReader() -> void:
 		UpdateCurrentMove("left")
 	if Input.is_action_just_pressed("debugging_key"):
 		UpdateCurrentMove(moveset)
-		
+
 func _process(delta: float) -> void:
 	if delta != 0:
 		InputKeyReader()
