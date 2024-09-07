@@ -1,12 +1,10 @@
 extends CanvasLayer
 
-@onready var menu = $pause_menu
+@onready var menu = $menu
 @onready var settings = $Settings
 
-enum state {playing, on_pause, in_cutscene, loading_screen}
-var states = state.playing
-
 var is_hidden: bool
+
 
 func _ready():
 	menu.hide()

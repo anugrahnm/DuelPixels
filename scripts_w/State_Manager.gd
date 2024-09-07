@@ -15,7 +15,7 @@ func _ready() -> void:
 	if initial_state:
 		initial_state.Enter()
 		current_state = initial_state
-	current_state.testvar = "hello"
+	#current_state.testvar = "hello"
 
 func on_child_transition(state,new_state_name):
 	if !current_state or state != current_state:
