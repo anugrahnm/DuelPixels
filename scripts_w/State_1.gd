@@ -7,6 +7,6 @@ func Enter() -> void:
 	print("In State 1")
 	player_label.text = "State_1"
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("jump"):
 		Transitioned.emit(self,"state_2")
