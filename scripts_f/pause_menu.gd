@@ -10,6 +10,7 @@ func _ready():
 	menu.hide()
 	is_hidden = true
 
+
 func resume():
 	get_tree().paused = false
 	menu.hide()

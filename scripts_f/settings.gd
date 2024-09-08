@@ -37,6 +37,29 @@ func _ready():
 	CheckIfMute()
 	CreateActionList()
 
+func _process(_delta):
+	IfMutePressed()
+	ToggleIfMute()
+
+
+func ShowSelfIfCurrentScene() -> void:
+	if self == get_tree().get_current_scene():
+		show()
+
+func Enter() -> void :
+	option_tabs.current_tab = 0
+	show()
+	is_hidden = true	
+
+func Exit() -> void :
+	option_tabs.current_tab = 0
+	hide()
+	is_hidden = false	
+
+func check_if_hidden() -> bool :
+	return is_hidden	
+
+########KEY BINDING SETTINGS########
 func CreateActionList():
 	InputMap.load_from_project_settings()
 	for item in action_list.get_children():
@@ -68,7 +91,7 @@ func _input(event):
 			if event is InputEventMouseButton && event.double_click:
 				event.double_click = false 
 			
-			InputMap.action_erase_event(action_to_remap, event)
+			InputMap.action_erase_events(action_to_remap)
 			InputMap.action_add_event(action_to_remap, event)
 			UpdateActionList(remapping_button, event)
 			
@@ -81,24 +104,9 @@ func _input(event):
 func UpdateActionList(button, event):
 	button.find_child("InputLabel").text = event.as_text().trim_suffix(" (Physical)")
 
-func ShowSelfIfCurrentScene() -> void:
-	if self == get_tree().get_current_scene():
-		show()
+####################################
 
-func Enter() -> void :
-	option_tabs.current_tab = 0
-	show()
-	is_hidden = true	
-
-func Exit() -> void :
-	option_tabs.current_tab = 0
-	hide()
-	is_hidden = false	
-
-func check_if_hidden() -> bool :
-	return is_hidden	
-
-########DISPLAY SETTINGS########
+##########DISPLAY SETTINGS##########
 func GetCurrentResolution():
 	current_resolution = DisplayServer.window_get_size(0)
 	print(current_resolution)
@@ -137,13 +145,27 @@ func BorderlessToggle(toggled_on):
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS,false)
 		print("Borderless Off")
 
-################################
+####################################
 
-#########AUDIO SETTINGS#########
+#########AUDIO SETTINGS#############
 func CheckIfMute():
 	if $"OptionTabs/General/SoundSettings/MuteCheckBox".button_pressed:
 		AudioServer.set_bus_mute(0, true)
 		print("Game Muted")
+
+func ToggleIfMute():
+	if AudioServer.is_bus_mute(0) == true:
+		$"OptionTabs/General/SoundSettings/MuteCheckBox".button_pressed = true
+	else:
+		$"OptionTabs/General/SoundSettings/MuteCheckBox".button_pressed = false
+
+func IfMutePressed():
+	if Input.is_action_just_pressed("mute_game") && AudioServer.is_bus_mute(0) == false:
+		AudioServer.set_bus_mute(0, true)
+		#print("MuteWorking")
+	elif Input.is_action_just_pressed("mute_game"):
+		AudioServer.set_bus_mute(0, false)
+		#print("UnMuteWorking")
 
 func GetVolume():
 	master_volume.value = db_to_linear(AudioServer.get_bus_volume_db(master))
@@ -170,15 +192,18 @@ func SFXVolumeSlider(value):
 	sfx_label.text = str(value * 100)
 	AudioServer.set_bus_volume_db(sfx, linear_to_db(value))
 
-################################
+####################################
 
-#######SIGNAL CONNECTIONS#######
+#########SIGNAL CONNECTIONS#########
 func _on_input_button_pressed(button, action):
 	if !is_remapping:
 		is_remapping = true
 		action_to_remap = action
 		remapping_button = button
 		button.find_child("InputLabel").text = "Press Key To Bind..."
+
+func _on_reset_button_pressed():
+	CreateActionList()
 
 func _on_resolution_option_button_item_selected(index):
 	ResolutionSelect(index)
@@ -203,8 +228,4 @@ func _on_music_volume_value_changed(value):
 
 func _on_sfx_volume_value_changed(value):
 	SFXVolumeSlider(value)
-################################
-
-
-func _on_reset_button_pressed():
-	CreateActionList()
+####################################

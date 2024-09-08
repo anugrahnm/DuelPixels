@@ -58,6 +58,7 @@ func InputKeyReader() -> void:
 	if Input.is_action_just_pressed("debugging_key"):
 		UpdateCurrentMove(moveset)
 
+
 func _process(delta: float) -> void:
 	if delta != 0:
 		InputKeyReader()
