@@ -26,6 +26,10 @@ window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 
+[gui]
+
+theme/custom_font="res://assets/Font/fluffy.ttf"
+
 [input]
 
 jump={

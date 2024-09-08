@@ -21,8 +21,8 @@ var input_actions = {
 	"punch": "Punch",
 	"kick": "Kick",
 	"heavy": "Heavy",
-	"grab_interact": "Grab/Interact(Hold)",
-	"roll_block": "Roll/Block(Hold)",
+	"grab_interact": "Grab / Interact(Hold)",
+	"roll_block": "Roll / Block(Hold)",
 	"mute_game": "Mute Game"
 	
 }
