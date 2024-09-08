@@ -83,18 +83,23 @@ func CreateActionList():
 
 func _input(event):
 	if is_remapping:
-		if (
-			event is InputEventKey ||
-			(event is InputEventMouseButton && event.pressed)
-		):
+		if event is InputEventKey and event.keycode == KEY_BACKSPACE:
+			InputMap.action_erase_events(action_to_remap)
+			UpdateActionList(remapping_button, null)
 			
+			is_remapping = false
+			action_to_remap = null
+			remapping_button = null
+			accept_event()
+			return
+		elif event is InputEventKey || (event is InputEventMouseButton && event.pressed):	
 			if event is InputEventMouseButton && event.double_click:
 				event.double_click = false 
-			
+
 			InputMap.action_erase_events(action_to_remap)
 			InputMap.action_add_event(action_to_remap, event)
 			UpdateActionList(remapping_button, event)
-			
+		
 			is_remapping = false
 			action_to_remap = null
 			remapping_button = null
@@ -102,7 +107,10 @@ func _input(event):
 			accept_event()
 
 func UpdateActionList(button, event):
-	button.find_child("InputLabel").text = event.as_text().trim_suffix(" (Physical)")
+	if event == null:
+		button.find_child("InputLabel").text = ""
+	else:
+		button.find_child("InputLabel").text = event.as_text().trim_suffix(" (Physical)")
 
 ####################################
 
