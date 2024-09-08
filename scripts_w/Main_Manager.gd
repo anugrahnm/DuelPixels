@@ -1,16 +1,15 @@
 extends Node
 class_name Main_Manager
 
-const JSON_FILE_PATH = "res://scripts_w/data2.json"
+const JSON_FILE_PATH = "res://scripts_w/data.json"
 const EMPTY = ""
 
-var json_file_access
 var json_data
 var data : Array
 
 
 func ExtractData():
-    json_file_access = FileAccess.open(JSON_FILE_PATH, FileAccess.READ)
+    var json_file_access = FileAccess.open(JSON_FILE_PATH, FileAccess.READ)
     json_data = JSON.parse_string(json_file_access.get_as_text())
 
 func FormatData():
@@ -20,9 +19,16 @@ func FormatData():
 
 func SearchInData(key_name,value):
     for item in data:
-        if item.all[key_name] == value:
-            print(item.all)
+        if item.all[key_name] == str(value):
+            print(item.all["id"]," : ",item.all["name"])
+
+func ShowNextMove(id:String):
+    for item in data:
+        if item.all["id"] == id:
+            print(item.all["id"]," > ",item.all["next_possible_move"])
 
 func _ready() -> void:
     ExtractData()
     FormatData()
+    #SearchInData("stamina","false")
+    #ShowNextMove("k2")

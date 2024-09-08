@@ -1,224 +1,314 @@
 [
   {
-    "N0": "punch (left jab)",
-    "N1": "punch (quick left jab)",
-    "N2": "N0.punch",
-    "N3": ""
+	"id": "p1",
+	"name": "left hook",
+	"last_possible_move": "",
+	"mid_air": "TRUE",
+	"min_enemy": "1",
+	"max_enemy": "2",
+	"stamina": "true",
+	"power_up": "red",
+	"aura": "FALSE",
+	"aura_level": "3",
+	"next_possible_move": "j2,p1,j1"
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "kick (high left kick)",
-    "N3": "N0.all"
+	"id": "p2",
+	"name": "left hook",
+	"last_possible_move": "p1",
+	"mid_air": "FALSE",
+	"min_enemy": "1",
+	"max_enemy": "3",
+	"stamina": "false",
+	"power_up": "blue",
+	"aura": "TRUE",
+	"aura_level": "4",
+	"next_possible_move": "j1,k2"
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "heavy (quick version of wind-up punch)",
-    "N3": "N0.all"
+	"id": "j1",
+	"name": "jump up",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "0",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "red",
+	"aura": "FALSE",
+	"aura_level": "2",
+	"next_possible_move": "j1,k3"
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "N0.jump",
-    "N3": ""
+	"id": "j2",
+	"name": "leap forward",
+	"last_possible_move": "k1",
+	"mid_air": "TRUE",
+	"min_enemy": "0",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "TRUE",
+	"aura_level": "1",
+	"next_possible_move": "p1,j1,k3"
   },
   {
-    "N0": "",
-    "N1": "N0.kick",
-    "N2": "",
-    "N3": ""
+	"id": "k1",
+	"name": "low kick",
+	"last_possible_move": "k3,p1",
+	"mid_air": "FALSE",
+	"min_enemy": "1",
+	"max_enemy": "2",
+	"stamina": "false",
+	"power_up": "red",
+	"aura": "FALSE",
+	"aura_level": "4",
+	"next_possible_move": "p1,j1,k3"
   },
   {
-    "N0": "",
-    "N1": "heavy (1-2 combo)",
-    "N2": "N0.punch",
-    "N3": ""
+	"id": "k2",
+	"name": "mid kick",
+	"last_possible_move": "p1,p2",
+	"mid_air": "FALSE",
+	"min_enemy": "1",
+	"max_enemy": "2",
+	"stamina": "true",
+	"power_up": "blue",
+	"aura": "TRUE",
+	"aura_level": "5",
+	"next_possible_move": "p1,j1,k1"
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "N0.kick",
-    "N3": ""
+	"id": "k3",
+	"name": "high kick",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "1",
+	"max_enemy": "1",
+	"stamina": "",
+	"power_up": "blue",
+	"aura": "FALSE",
+	"aura_level": "3",
+	"next_possible_move": "p2,j3,k3"
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "heavy (right back-hand slap)",
-    "N3": "N0.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "N0.jump [+ follow_up_power_up]",
-    "N3": ""
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "N0.jump",
-    "N2": "",
-    "N3": ""
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "kick (low right kick)",
-    "N1": "N0.punch",
-    "N2": "",
-    "N3": ""
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "kick (quick mid right kick)",
-    "N2": "N0.punch",
-    "N3": ""
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "kick (low left kick)",
-    "N3": "N0.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "{heavy invalidated}",
-    "N3": "N0.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "jump (resets character orientation mid air)",
-    "N3": "all = N0.kick.N1.jump.N2.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "heavy (after stepping back to N0 position, mid left kick that also leaps the character forward by a bit)",
-    "N2": "N0.all",
-    "N3": ""
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "jump (resets character orientation mid air)",
-    "N2": "{punch invalidated}",
-    "N3": "N0.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "kick (mid-air left mid swing kick)",
-    "N3": "N0.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "{heavy invalidated}",
-    "N3": "N0.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "{jump invalidated}",
-    "N3": "N0.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "heavy (wind-up punch)",
-    "N1": "{inputs invalidated}",
-    "N2": "NO.all",
-    "N3": ""
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "jump (jump straight up)",
-    "N1": "{punch invalidated}",
-    "N2": "N0.all",
-    "N3": ""
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "kick (air kick)",
-    "N2": "N0.punch",
-    "N3": ""
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   },
   {
-    "N0": "",
-    "N1": "",
-    "N2": "kick (kick-push enemy back and jump back and create distance)",
-    "N3": "N0.all [+ power_up]"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "N0.heavy",
-    "N3": ""
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "N0.jump",
-    "N3": ""
-  },
-  {
-    "N0": "",
-    "N1": "heavy (superman punch)",
-    "N2": "N0.all",
-    "N3": ""
-  },
-  {
-    "N0": "",
-    "N1": "jump (double jump if elevated surface nearby) or else N0.jump",
-    "N2": "{punch invalidated}",
-    "N3": "N0.all"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "kick (knees to the face)",
-    "N3": "{punch invalidated} > N0.all"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "",
-    "N3": "kick = N0.jump.N1.kick.N2.kick"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "",
-    "N3": "heavy = N0.kick.N1.jump.N2.kick"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "",
-    "N3": "{jump invalidated} > N0.all"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "heavy (elbows on top of the head)",
-    "N3": "{punch ivalidated} > N0.all"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "",
-    "N3": "kick = N0.jump.N1.jump.N2.kick"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "",
-    "N3": "heavy = N0.jump.N1.jump.N2.kick"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "",
-    "N3": "{jump invalidated} > N0.all"
-  },
-  {
-    "N0": "",
-    "N1": "",
-    "N2": "jump (steps on the enemy to jump behind them)",
-    "N3": "N0.all"
+	"id": "",
+	"name": "",
+	"last_possible_move": "",
+	"mid_air": "FALSE",
+	"min_enemy": "",
+	"max_enemy": "",
+	"stamina": "",
+	"power_up": "",
+	"aura": "FALSE",
+	"aura_level": "",
+	"next_possible_move": ""
   }
 ]
