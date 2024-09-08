@@ -18,7 +18,13 @@ var input_actions = {
 	"jump": "Jump",
 	"left": "Left",
 	"right": "Right",
+	"punch": "Punch",
+	"kick": "Kick",
+	"heavy": "Heavy",
+	"grab_interact": "Grab/Interact(Hold)",
+	"roll_block": "Roll/Block(Hold)",
 	"mute_game": "Mute Game"
+	
 }
 
 var master = AudioServer.get_bus_index("Master")
