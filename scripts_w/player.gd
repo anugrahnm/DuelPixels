@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var player_label: Label = %player_label
+@onready var input_handler: Input_Handler = $Input_Handler
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0

@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://b6behagu2ypqw"]
+[gd_scene load_steps=8 format=3 uid="uid://b6behagu2ypqw"]
 
 [ext_resource type="Texture2D" uid="uid://c8qrn0uxjy4bu" path="res://icon.svg" id="1_gk5xk"]
 [ext_resource type="Script" path="res://scripts_w/player.gd" id="1_jm4j0"]
+[ext_resource type="Script" path="res://scripts_w/Input_handler.gd" id="4_3vjrr"]
 [ext_resource type="Script" path="res://scripts_w/Main_Manager.gd" id="6_ixkeq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fv0tf"]
@@ -57,3 +58,6 @@ shape = SubResource("RectangleShape2D_kx2k4")
 
 [node name="Main_Manager" type="Node" parent="."]
 script = ExtResource("6_ixkeq")
+
+[node name="Input_Handler" type="Node" parent="."]
+script = ExtResource("4_3vjrr")
