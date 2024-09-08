@@ -6,7 +6,7 @@ var current_state : Base_State
 var states : Dictionary
 
 func _ready() -> void:
-	print("State_Manager Bootup")
+	#print("State_Manager Bootup")
 	for child in get_children():
 		if child is Base_State:
 			states[child.name.to_lower()] = child
@@ -15,11 +15,11 @@ func _ready() -> void:
 	if initial_state:
 		initial_state.Enter()
 		current_state = initial_state
-	current_state.testvar = "hello"
+	#current_state.testvar = "hello"
 
 func on_child_transition(state,new_state_name):
 	if !current_state or state != current_state:
-		print("error")
+		#print("error")
 		return
 	
 	var new_state = states.get(new_state_name.to_lower())

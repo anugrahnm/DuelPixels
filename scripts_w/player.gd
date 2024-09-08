@@ -19,8 +19,8 @@ var string_passed: String
 func _ready() -> void:
 	
 	
-	current_array.resize(6)
-	current_array.fill("0")
+	current_array.resize(7)
+	current_array.fill("")
 
 func UpdateCurrentMove(current_move) -> void:
 	
@@ -28,18 +28,22 @@ func UpdateCurrentMove(current_move) -> void:
 	#print(parse["N0"]["kick (low right kick)"][1]["N1"]["kick (quick mid right kick)"][1]["N2"]["jump (resets character orientation mid air)"])
 	#data["N0"][last_N0_value][1]["N1"][last_N1_value][1]["N2"][last_N2_value].append(temp3)
 	
-	if not "N0" in current_array:
-		current_array[0] = "N0"
+	if not current_array[1]:
+		current_array[0] = "[ "
 		current_array[1] = current_move
-	elif not "N1" in current_array:
-		current_array[2] = "N1"
+	elif not current_array[3]:
+		current_array[2] = ">"
 		current_array[3] = current_move
 	else:
-		current_array[4] = "N2"
+		if current_array[5]:
+			current_array[1] = current_array[3]
+			current_array[3] = current_array[5]
+		current_array[4] = ">"
 		current_array[5] = current_move
+		current_array[6] = " ]"
 	#print(current_array)
 		
-	string_passed = ".".join(current_array)
+	string_passed = "".join(current_array)
 	ChangeText(string_passed)
 
 func ChangeText(string_passed) -> void:

@@ -1,0 +1,86 @@
+{
+	"p1": {
+		"name": "\"left\"",
+		"last_possible": "po",
+		"mid_air": true,
+		"min_enemy": 1,
+		"max_enemy": 2,
+		"stamina": true,
+		"power_up": "red ",
+		"aura": false,
+		"aura_level": "",
+		"nexpossible move": "j2,p3,j1"
+	},
+	"p2": {
+		"name": "",
+		"last_possible": "",
+		"mid_air": false,
+		"min_enemy": "",
+		"max_enemy": 5,
+		"stamina": false,
+		"power_up": "",
+		"aura": false,
+		"aura_level": "",
+		"nexpossible move": ""
+	},
+	"j1": {
+		"name": "\"up\"",
+		"last_possible": "p4",
+		"mid_air": false,
+		"min_enemy": "",
+		"max_enemy": "",
+		"stamina": "EMPTY",
+		"power_up": "",
+		"aura": false,
+		"aura_level": "",
+		"nexpossible move": ""
+	},
+	"j2": {
+		"name": "",
+		"last_possible": "",
+		"mid_air": true,
+		"min_enemy": 4,
+		"max_enemy": "",
+		"stamina": "",
+		"power_up": "",
+		"aura": false,
+		"aura_level": "",
+		"nexpossible move": ""
+	},
+	"h1": {
+		"name": "",
+		"last_possible": "",
+		"mid_air": false,
+		"min_enemy": "",
+		"max_enemy": "",
+		"stamina": "",
+		"power_up": "",
+		"aura": false,
+		"aura_level": "",
+		"nexpossible move": ""
+	},
+	"h2": {
+		"name": "",
+		"last_possible": "",
+		"mid_air": false,
+		"min_enemy": "",
+		"max_enemy": "",
+		"stamina": "",
+		"power_up": "blue power",
+		"aura": true,
+		"aura_level": "",
+		"nexpossible move": ""
+	},
+	"h3": {
+		"name": "",
+		"last_possible": "",
+		"mid_air": false,
+		"min_enemy": "",
+		"max_enemy": "",
+		"stamina": "",
+		"power_up": "",
+		"aura": false,
+		"aura_level": "",
+		"nexpossible move": ""
+	}
+}
