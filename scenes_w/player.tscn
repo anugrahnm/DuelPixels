@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://b6behagu2ypqw"]
+[gd_scene load_steps=10 format=3 uid="uid://b6behagu2ypqw"]
 
 [ext_resource type="Texture2D" uid="uid://c8qrn0uxjy4bu" path="res://icon.svg" id="1_gk5xk"]
 [ext_resource type="Script" path="res://scripts_w/player.gd" id="1_jm4j0"]
 [ext_resource type="Script" path="res://scripts_w/Input_handler.gd" id="4_3vjrr"]
-[ext_resource type="Script" path="res://scripts_w/Main_Manager.gd" id="6_ixkeq"]
+[ext_resource type="Script" path="res://scripts_w/Data_Extractor.gd" id="5_v2jo7"]
+[ext_resource type="Script" path="res://scripts_w/Data_Handler.gd" id="6_qo672"]
+[ext_resource type="Script" path="res://scripts_w/Executer.gd" id="6_x115f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fv0tf"]
 atlas = ExtResource("1_gk5xk")
@@ -31,17 +33,43 @@ script = ExtResource("1_jm4j0")
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_7yqyo")
 
-[node name="player_label" type="Label" parent="."]
+[node name="player_collison_box" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_kx2k4")
+
+[node name="Input_Handler" type="Node" parent="."]
 unique_name_in_owner = true
+script = ExtResource("4_3vjrr")
+
+[node name="Data_Extractor" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_v2jo7")
+
+[node name="Data_Handler" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("6_qo672")
+
+[node name="Executer" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("6_x115f")
+
+[node name="Debug_text" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="player_label" type="Label" parent="Debug_text"]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -18.0
-offset_top = -39.0
-offset_right = 17.0
-offset_bottom = -16.0
+offset_left = -38.0
+offset_top = -79.0
+offset_right = -3.0
+offset_bottom = -56.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
@@ -51,13 +79,3 @@ text = "Start_text
 horizontal_alignment = 1
 vertical_alignment = 2
 autowrap_mode = 2
-
-[node name="player_collison_box" type="CollisionShape2D" parent="."]
-scale = Vector2(0.5, 0.5)
-shape = SubResource("RectangleShape2D_kx2k4")
-
-[node name="Main_Manager" type="Node" parent="."]
-script = ExtResource("6_ixkeq")
-
-[node name="Input_Handler" type="Node" parent="."]
-script = ExtResource("4_3vjrr")
