@@ -5,21 +5,27 @@ extends CharacterBody2D
 @onready var data_handler : Data_Handler = %Data_Handler
 @onready var executer : Executer = %Executer
 
+var key_inputs = []
+
 func _ready() -> void:
 	init()
 
 func init() -> void:
 	data_handler.HandleData(data_extractor.ExtractData())
-	#print(data_handler.DataFilter("id", "p2",["mid_air"]))
+	print(data_handler.DataFilter("id","j2",["next_possible_move"]))
+
+func ShowNextPossibleMoveOfId(id):
+	return data_handler.DataFilter("id",id,["next_possible_move"],true)[0][0]
 
 func _process(delta: float) -> void:
-	UpdateSubNodes(delta)
+	ProcessSubNodes(delta)
 
-func UpdateSubNodes(delta: float):
-	input_handler.Update(delta)
+func ProcessSubNodes(delta: float):
+	input_handler.Process(delta)
+	executer.PhysicsProcess(delta,key_inputs)
 
 func _physics_process(delta: float) -> void:
-	PhysicsUpdateSubNodes(delta)
+	PhysicsProcessSubNodes(delta)
 
-func PhysicsUpdateSubNodes(delta:float):
-	input_handler.PhysicsUpdate(delta)
+func PhysicsProcessSubNodes(delta:float):
+	input_handler.PhysicsProcess(delta)

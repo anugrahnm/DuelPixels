@@ -53,13 +53,13 @@ script = ExtResource("6_qo672")
 unique_name_in_owner = true
 script = ExtResource("6_x115f")
 
-[node name="Debug_text" type="Control" parent="."]
+[node name="Debug" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="player_label" type="Label" parent="Debug_text"]
+[node name="debug_label" type="Label" parent="Debug"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
