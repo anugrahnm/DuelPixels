@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://b6behagu2ypqw"]
+[gd_scene load_steps=9 format=3 uid="uid://b6behagu2ypqw"]
 
 [ext_resource type="Texture2D" uid="uid://c8qrn0uxjy4bu" path="res://icon.svg" id="1_gk5xk"]
 [ext_resource type="Script" path="res://scripts_w/player.gd" id="1_jm4j0"]
-[ext_resource type="Script" path="res://scripts_w/Input_handler.gd" id="4_3vjrr"]
-[ext_resource type="Script" path="res://scripts_w/Data_Extractor.gd" id="5_v2jo7"]
+[ext_resource type="Script" path="res://scripts_w/Input_Handler.gd" id="4_3vjrr"]
 [ext_resource type="Script" path="res://scripts_w/Data_Handler.gd" id="6_qo672"]
-[ext_resource type="Script" path="res://scripts_w/Executer.gd" id="6_x115f"]
+[ext_resource type="Script" path="res://scripts_w/Output_Handler.gd" id="6_x115f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fv0tf"]
 atlas = ExtResource("1_gk5xk")
@@ -41,15 +40,11 @@ shape = SubResource("RectangleShape2D_kx2k4")
 unique_name_in_owner = true
 script = ExtResource("4_3vjrr")
 
-[node name="Data_Extractor" type="Node" parent="."]
-unique_name_in_owner = true
-script = ExtResource("5_v2jo7")
-
 [node name="Data_Handler" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("6_qo672")
 
-[node name="Executer" type="Node" parent="."]
+[node name="Output_Handler" type="Node" parent="."]
 unique_name_in_owner = true
 script = ExtResource("6_x115f")
 

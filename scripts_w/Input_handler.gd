@@ -2,42 +2,28 @@ extends Node
 class_name Input_Handler
 
 @onready var player: CharacterBody2D = get_parent()
-@onready var executer : Executer = %Executer
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 
 var all_inputs = ["right","left","jump","punch","kick","heavy","grab_interact","roll_block","debugging_key"]
 var debug_ignore = ["right","left","debugging_key"]
+var holdable_input = ["right","left","grab_interact","roll_block"]
+var only_allowed_input = []
 var restricted_input = []
 
 func InputKeyReader() -> void:
-	for i in all_inputs:
-		if Input.is_action_just_pressed(i) and not i in restricted_input:
-			player.key_inputs.append(i)
-			if not i in debug_ignore:
-				executer.UpdateDebugText(i)
-	#for i in player.ShowNextPossibleMoveOfId("p1"):
-		#executer.UpdateDebugText(i)
+	if only_allowed_input:
+		all_inputs = only_allowed_input
 		
-func Process(delta: float) -> void:
-	InputKeyReader()
+	for key in all_inputs:
+		if Checks_If_Player_Presses_Unholdable_Input(key) or Checks_If_Player_Holds_Holdable_Input(key) :
+			player.key_inputs.append(key)
+			if not key in debug_ignore:
+				player.UpdateDebugText(key)
+
+func Checks_If_Player_Presses_Unholdable_Input(key) -> bool:
+	return not key in holdable_input and Input.is_action_just_pressed(key) and not key in restricted_input
+	
+func Checks_If_Player_Holds_Holdable_Input(key) -> bool:
+		return key in holdable_input and Input.is_action_pressed(key) and not key in restricted_input
 
 func PhysicsProcess(delta: float) -> void:
-	# Add the gravity.
-	if not player.is_on_floor():
-		player.velocity += player.get_gravity() * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("jump") and player.is_on_floor() and not "jump" in restricted_input:
-		player.velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction := Input.get_axis("left", "right")
-	if direction:
-		player.velocity.x = direction * SPEED
-	else:
-		player.velocity.x = move_toward(player.velocity.x, 0, SPEED)
-
-	player.move_and_slide()
+	InputKeyReader()
