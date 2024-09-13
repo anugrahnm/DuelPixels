@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6behagu2ypqw"]
+[gd_scene load_steps=10 format=3 uid="uid://b6behagu2ypqw"]
 
 [ext_resource type="Texture2D" uid="uid://c8qrn0uxjy4bu" path="res://icon.svg" id="1_gk5xk"]
 [ext_resource type="Script" path="res://scripts_w/player.gd" id="1_jm4j0"]
 [ext_resource type="Script" path="res://scripts_w/Input_Handler.gd" id="4_3vjrr"]
+[ext_resource type="Script" path="res://scripts_w/Stat_Handler.gd" id="6_or4uc"]
 [ext_resource type="Script" path="res://scripts_w/Data_Handler.gd" id="6_qo672"]
 [ext_resource type="Script" path="res://scripts_w/Output_Handler.gd" id="6_x115f"]
 
@@ -48,23 +49,27 @@ script = ExtResource("6_qo672")
 unique_name_in_owner = true
 script = ExtResource("6_x115f")
 
+[node name="Stat_Handler" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("6_or4uc")
+
 [node name="Debug" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="debug_label" type="Label" parent="Debug"]
+[node name="debug_label1" type="Label" parent="Debug"]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -38.0
-offset_top = -79.0
-offset_right = -3.0
-offset_bottom = -56.0
+offset_left = -84.0
+offset_top = -103.0
+offset_right = 44.0
+offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
@@ -73,4 +78,43 @@ text = "Start_text
 "
 horizontal_alignment = 1
 vertical_alignment = 2
-autowrap_mode = 2
+
+[node name="debug_label2" type="Label" parent="Debug"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -84.5
+offset_top = -79.0
+offset_right = 43.5
+offset_bottom = -56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+theme_override_font_sizes/font_size = 16
+text = "Start_text
+"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="debug_label3" type="Label" parent="Debug"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -38.0
+offset_top = -24.0
+offset_right = -3.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Start_text
+"
+horizontal_alignment = 1
+vertical_alignment = 2
