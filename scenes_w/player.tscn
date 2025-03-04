@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://b6behagu2ypqw"]
 
 [ext_resource type="Texture2D" uid="uid://c8qrn0uxjy4bu" path="res://icon.svg" id="1_gk5xk"]
-[ext_resource type="Script" path="res://scripts_w/player.gd" id="1_jm4j0"]
-[ext_resource type="Script" path="res://scripts_w/Input_Handler.gd" id="4_3vjrr"]
-[ext_resource type="Script" path="res://scripts_w/Stat_Handler.gd" id="6_or4uc"]
-[ext_resource type="Script" path="res://scripts_w/Data_Handler.gd" id="6_qo672"]
-[ext_resource type="Script" path="res://scripts_w/Output_Handler.gd" id="6_x115f"]
+[ext_resource type="Script" uid="uid://fhutfiw8iimd" path="res://scripts_w/player.gd" id="1_jm4j0"]
+[ext_resource type="Script" uid="uid://cvvaunw40v4gm" path="res://scripts_w/Input_Handler.gd" id="4_3vjrr"]
+[ext_resource type="Script" uid="uid://bxxe7le53swyx" path="res://scripts_w/Stat_Handler.gd" id="6_or4uc"]
+[ext_resource type="Script" uid="uid://346e30u8vamn" path="res://scripts_w/Data_Handler.gd" id="6_qo672"]
+[ext_resource type="Script" uid="uid://bhw6qdein7vkx" path="res://scripts_w/Output_Handler.gd" id="6_x115f"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fv0tf"]
 atlas = ExtResource("1_gk5xk")
