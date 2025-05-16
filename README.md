@@ -35,6 +35,14 @@ DuelPixels/
 ├── scripts_w/          # AI enemy scripts and logic
 ├── project.godot       # Main project file
 ```
+
+## Screenshots
+WORK IN PROGRESS - DEBUG STAGE
+
+<img width="643" alt="main" src="https://github.com/user-attachments/assets/60a46552-f2d2-47da-b2a9-6dad11d0f997" />
+<img width="640" alt="pausemenu" src="https://github.com/user-attachments/assets/44b7a446-e2e9-4fa2-98ac-2f8de4e678e3" />
+<img width="639" alt="settingsscreen" src="https://github.com/user-attachments/assets/80ff11dd-fbd3-4cb5-a342-967eaebca4e2" />
+
 ## 🙏 Acknowledgments
 
 - Built with ❤️ using Godot Engine
